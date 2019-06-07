@@ -23,6 +23,8 @@
         document.querySelector("#checkMyFormData").onclick = function (e) {
             e.preventDefault()
 
+            // see how you access the form value via .value
+            // remember how you change the employeeNameP innerHTML
             document.querySelector("#employeeNameP").innerHTML = `Employee: ${document.querySelector("#employeeName").value}`
             document.querySelector("#ageP").innerHTML = `Age: ${document.querySelector("#age").value}`
             document.querySelector("#salaryWithTaxes").innerHTML = `Salary with taxes (21%): ${parseInt(document.querySelector("#salary").value) * 1.21} eur`
