@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .new-class {
+            background: red;
+            transform: rotate(50deg);
+        }
+
+        #test-id {
+            background: blue;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <button id="myButton">Test</button>
+    <div>
+        <div id="testdiv"></div>
+        <ul id="test">
+            <li><span id="first-span">Lorem, ipsum.</span></li>
+            <li><span class="test-class">Ex, facilis?</span></li>
+            <li><span>Beatae, harum!</span></li>
+            <li><span>Laudantium, nobis!</span></li>
+            <li><span>Veniam, animi?</span></li>
+        </ul>
+
+        <!-- <ul>
+            <li><span>Lorem, ipsum.</span></li>
+            <li><span class="test-class">Ex, facilis?</span></li>
+            <li><span>Beatae, harum!</span></li>
+            <li><span class="test-class">Laudantium, nobis!</span></li>
+            <li><span>Veniam, animi?</span></li>
+        </ul> -->
+    </div>
+    <script>
+        document.querySelectorAll("span")
+
+
+        var alternate = 0
+
+        document.querySelector("#myButton").onclick = function () {
+            alternate++
+
+            if (alternate % 2 === 0) {
+                document.querySelector("#first-span").style.color = "red"
+            }   else {
+                document.querySelector("#first-span").style.color = "green"
+            }
+        }
+    </script>
+</body>
+
+</html>

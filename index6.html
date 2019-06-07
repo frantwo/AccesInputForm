@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            background: black;
+        }
+
+        div {
+            height: 100px;
+            width: 100px;
+            /* border-radius: 50%; */
+            /* border: 1px solid black; */
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            margin: 5px;
+            transition: all 1.25s ease-in-out;
+            position: absolute;
+        }
+
+        div.but-0 {
+            background-image: url("./butterfly.png");
+        }
+
+        div.but-1 {
+            background-image: url("./butterfly2.png");
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+        // setInterval(function () {
+        //     document.body.innerHTML = ""
+
+        //     for (var i = 0; i < 150; i++) {
+        //         var divDOMEl = document.createElement("div")
+        //         divDOMEl.style.backgroundColor = `rgb(${Math.random() * 255}, 0, 0)`
+        //         document.body.appendChild(divDOMEl)
+        //     }
+
+        // }, 50)
+
+        // setInterval(function () {
+        //     document.body.innerHTML = ""
+
+        //     for (var i = 0; i < 150; i++) {
+        //         var divDOMEl = document.createElement("div")
+        //         divDOMEl.style.backgroundColor = `rgb(${Math.random() * 255}, 0, 0)`
+        //         document.body.appendChild(divDOMEl)
+        //     }
+
+        // }, 50)
+
+
+        var divDOMEl;
+        var dimensions;
+
+        for (var i = 0; i < 200; i++) {
+            divDOMEl = document.createElement("div")
+            dimensions = `${Math.random() * 200 + 10}px`
+
+            // divDOMEl.style.backgroundColor = `rgba(${Math.random() * 255}, ${Math.random() * 255}, 0, 1)`
+            divDOMEl.style.width = dimensions
+            divDOMEl.style.height = dimensions
+            divDOMEl.style.left = `${Math.random () * 1800}px`
+            divDOMEl.style.top = `${Math.random () * 1800}px`
+            divDOMEl.className = `but-${Math.round(Math.random())}`
+
+            document.body.appendChild(divDOMEl)
+        }
+
+        setInterval(() => {
+            var allDIVs = document.querySelectorAll("div")
+
+            for (var i = 0; i < allDIVs.length; i++) {
+                // dimensions = `${Math.random() * 200 + 10}px`
+
+                // allDIVs[i].style.backgroundColor = `rgba(${Math.random() * 255}, ${Math.random() * 255}, 0, 1)`
+                // allDIVs[i].style.width = dimensions
+                // allDIVs[i].style.height = dimensions
+                allDIVs[i].style.transform = `rotate(${Math.random() * 360}deg)`
+                // allDIVs[i].style.borderRadius = `${Math.random() * 50}%`
+            }
+        }, 1500)
+
+
+    </script>
+</body>
+
+</html>

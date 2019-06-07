@@ -91,21 +91,21 @@
         //////////////////////////////////////////////////////////////////
         //////////////////////////////////////////////////////////////////
         // step 4 - array length was cached for improved performance
-        function avg(studentId) {
-            let average = 0
-            let totalMarks = students[studentId].marks.length
+        // function avg(studentId) {
+        //     let average = 0
+        //     let totalMarks = students[studentId].marks.length
 
-            for (var i = 0; i < totalMarks; i++) {
-                average += students[studentId].marks[i]
-            }
+        //     for (var i = 0; i < totalMarks; i++) {
+        //         average += students[studentId].marks[i]
+        //     }
 
-            return (average / totalMarks)
-        }
+        //     return (average / totalMarks)
+        // }
 
-        for (var i = 0; i < students.length; i++) {
-            console.log(`${students[i].name} ${students[i].surname}: ${avg(i)}`)
-        }
-        
+        // for (var i = 0; i < students.length; i++) {
+        //     console.log(`${students[i].name} ${students[i].surname}: ${avg(i)}`)
+        // }
+
         //////////////////////////////////////////////////////////////////
 
 
@@ -129,6 +129,51 @@
         // for (var i = 0; i < stars.length; i++) {
         //     console.log(stars[i].name)
         // }
+
+        // var studentObj = {
+        //     "name": "Francho",
+        //     "surname": "García",
+        //     "age": 35,
+        //     "marks": [9, 8, 5]
+        // }
+
+        // console.log(`hola ${Math.random()}`)
+
+
+        // var student = {
+        //     "name": "vanessa",
+        //     "grade0": 9,
+        //     "grade1": 8,
+        //     "grade2": 6
+        // }
+
+        function randomIntFromInterval(min, max) // min and max included
+        {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        var butterflies = []
+        var totalButterflies = 1000
+
+        for (var i = 0; i < totalButterflies; i++) {
+            butterflies[i] = {
+                x: Math.random() * 1000,
+                y: Math.random() * 500,
+                type: randomIntFromInterval(1, 3),
+                rotation: randomIntFromInterval(0, 360)
+            }
+        }
+
+        console.log(butterflies)
+
+
+        var star10 = {name: "soirss", age: 200000, color: "red"}
+        
+        for (myKey in star10) {
+            console.log(myKey, star10[myKey])
+        }
+
+
 
     </script>
 </head>

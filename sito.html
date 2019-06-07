@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <span>Lorem, ipsum.</span>
+    <span>Nesciunt, aperiam!</span>
+    <span>Nulla, ducimus.</span>
+    <span>Beatae, commodi!</span>
+
+    <script>
+        // var ppp = document.querySelectorAll("span")
+        [...document.getElementsByTagName("span")]
+            .forEach((x, idx) => 
+                idx % 2 ? 
+                    x.style.color = 'red' 
+                    :
+                    x.style.color = 'green'
+            )
+
+        // console.log(ppp)
+    </script>
+</body>
+</html>
