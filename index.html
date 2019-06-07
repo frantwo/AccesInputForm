@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // let students = [`francho`, `shakir`, `rubén`, `vanessa`, `javi`];
+
+        // let franchoStudent = {
+        //     name: `Francho`,
+        //     surname: `García`,
+        //     age: 35,
+        //     marks: [10, 8, 5]
+        // }
+
+        // let rubenStudent = {
+        //     name: `Rubén`,
+        //     surname: `Vallejo`,
+        //     age: 29,
+        //     marks: [6, 9, 10]
+        // }
+
+        // let students = [franchoStudent, rubenStudent];
+
+        // this students[0].marks[0][1] yields 22222222
+
+        // Francho García 8.3
+        // Rubén Vallejo 7.9
+
+
+
+
+
+        let students = [{
+            name: `Francho`,
+            surname: `García`,
+            age: 35,
+            marks: [9, 8, 5]
+        }, {
+            name: `Rubén`,
+            surname: `Vallejo`,
+            age: 29,
+            marks: [6, 9, 10]
+        },
+        {
+            name: `Miri`,
+            surname: `Loper`,
+            age: 31,
+            marks: [9, 9, 2]
+        }];
+
+        // step 1 - super basic average calculation
+
+        // let average = 0
+
+        // for (var i = 0; i < students[0].marks.length; i++) {
+        //     average += students[0].marks[i]
+        // }
+
+        // console.log(average / students[0].marks.length)
+
+        //////////////////////////////////////////////////////////////////
+        // step 2 - array length was cached for improved performance
+        // let average = 0
+        // let totalMarks = students[0].marks.length
+
+        // for (var i = 0; i < totalMarks; i++) {
+        //     average += students[0].marks[i]
+        // }
+
+        // console.log(average / totalMarks)
+        //////////////////////////////////////////////////////////////////
+        // step 3 - average computation has been refactored to a function
+        // for abstraction purposes
+        // function avg(studentId) {
+        //     let average = 0
+        //     let totalMarks = students[studentId].marks.length
+
+        //     for (var i = 0; i < totalMarks; i++) {
+        //         average += students[studentId].marks[i]
+        //     }
+
+        //     return (average / totalMarks)
+        // }
+
+        // console.log(avg(0))
+        // console.log(avg(1))
+        //////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////
+        // step 4 - array length was cached for improved performance
+        function avg(studentId) {
+            let average = 0
+            let totalMarks = students[studentId].marks.length
+
+            for (var i = 0; i < totalMarks; i++) {
+                average += students[studentId].marks[i]
+            }
+
+            return (average / totalMarks)
+        }
+
+        for (var i = 0; i < students.length; i++) {
+            console.log(`${students[i].name} ${students[i].surname}: ${avg(i)}`)
+        }
+        
+        //////////////////////////////////////////////////////////////////
+
+
+        // let stars = [
+        //     {
+        //         name: "proxima centauri",
+        //         radius: 121,
+        //         astronomic_distance: 121,
+        //         age: 12,
+        //         color: "blue"
+        //     },
+        //     {
+        //         name: "virgo",
+        //         radius: 12,
+        //         astronomic_distance: 19,
+        //         age: 24,
+        //         color: "red"
+        //     }
+        // ]
+
+        // for (var i = 0; i < stars.length; i++) {
+        //     console.log(stars[i].name)
+        // }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
